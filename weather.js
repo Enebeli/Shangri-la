@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const apiKey = '672a18bc60d7a5e8216c84a28f8ff6c6'; 
+    const lat = 21.161908;
     const lon = -86.8515;
     const weatherDiv = document.getElementById('weather');
   
