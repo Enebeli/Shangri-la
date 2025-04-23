@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Playfair+Display:wght@400;700&display=swap');
 
 :root {
 	--primary-color: #0066cc;
@@ -18,7 +19,7 @@
 
 /* Base Typography & Layout */
 body {
-	font-family: 'Gabriela', serif;
+	font-family: 'Gabriela', 'Playfair Display',Arial, serif;
 	line-height: 1.6;
 	color: var(--text-color);
 	background: var(--background-light);
@@ -78,7 +79,7 @@ img {
 
 /* Hero Section */
 .hero {
-	background: url('/photos/hero.jpg') center/cover no-repeat;
+	background: url('photos/hero.jpg') center/cover no-repeat;
 	height: 60vh;
 	position: relative;
 	display: flex;
