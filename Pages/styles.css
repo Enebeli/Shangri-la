@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+:root {
+	--primary-color: #0066cc;
+	--secondary-color: #ff7f50;
+	--accent-color: #FF0000;
+	--background-light: #f0f8ff;
+	--card-bg: #ffffff;
+	--text-color: #333333;
+}
+
+/* Global Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Base Typography & Layout */
+body {
+	font-family: 'Gabriela', serif;
+	line-height: 1.6;
+	color: var(--text-color);
+	background: var(--background-light);
+}
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+ul {
+	list-style: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+}
+
+/* Sticky Header */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem 2rem;
+	background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+	color: #fff;
+}
+.site-header .logo img {
+	filter: brightness(0) invert(1);
+}
+.main-nav ul {
+	display: flex;
+	gap: 1.5rem;
+}
+.main-nav a {
+	color: #fff;
+	padding: 0.5rem 0;
+	position: relative;
+}
+.main-nav a.active,
+.main-nav a:hover {
+	color: var(--accent-color);
+}
+.main-nav a.active::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 100%;
+	height: 3px;
+	background: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+	background: url('/photos/hero.jpg') center/cover no-repeat;
+	height: 60vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	text-align: center;
+}
+.hero::before {
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
+  }
+  
+.hero-content h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+.hero-content p {
+	font-size: 1.25rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+	display: inline-block;
+	padding: 0.75rem 1.25rem;
+	border-radius: 4px;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Gabriela', serif;
+	transition: background 0.3s, color 0.3s;
+}
+.btn-primary {
+	background-color: var(--accent-color);
+	color: #fff;
+	border: 2px solid var(--accent-color);
+}
+.btn-outline {
+	background: none;
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+/* Feature Cards */
+.features {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	gap:1.5rem;
+	padding:2rem;
+}
+.feature-card {
+	background: var(--card-bg);
+	padding:1.5rem;
+	border-radius:8px;
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	text-align:center;
+}
+
+/* Card Layout for Spa & Dining Overviews */
+.spa-overview,
+.dining-overview {
+	display:flex;
+	align-items:flex-start;
+	gap:2rem;
+	background:var(--card-bg);
+	padding:2rem;
+	border-radius:8px;
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	margin:2rem auto;
+	max-width:1200px;
+}
+.spa-overview img,
+.dining-overview img {
+	flex:0 0 300px;
+	border-radius:6px;
+}
+.spa-overview div,
+.dining-overview div {
+	flex:1;
+}
+
+/* Card Layout for Sections (Spa-list & Restaurant) */
+.restaurant,
+.spa-list {
+	display:flex;
+	align-items:flex-start;
+	gap:2rem;
+	background:var(--card-bg);
+	padding:2rem;
+	border-radius:8px;
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	margin:1.5rem auto;
+	max-width:800px;
+	flex-wrap:wrap;
+}
+.restaurant img,
+.spa-list img {
+	flex:0 0 200px;
+	border-radius:6px;
+}
+
+/* Room & Activities Card Layout */
+.room-section,
+.activities-section {
+	background: var(--card-bg);
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	margin: 1.5rem auto;
+	max-width: 800px;
+}
+
+/* Accommodation Cards in Homepage */
+.accommodations-preview {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	gap: 1.5rem;
+	padding: 2rem;
+	background: var(--card-bg);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	margin: 2rem auto;
+	max-width: 1200px;
+}
+
+/* Testimonials */
+.testimonials-preview,
+.testimonials {
+	padding: 2rem;
+	text-align: center;
+}
+.testimonials blockquote,
+.testimonial {
+	margin: 1.5rem auto;
+	max-width: 600px;
+	font-style: italic;
+}
+.testimonials blockquote footer,
+.testimonial footer {
+	margin-top: 0.5rem;
+	font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:1rem;
+	padding:1.5rem;
+	background:var(--primary-color);
+	color:#fff;
+}
+
+/* Reservations Page Styles */
+.reservation-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  .reservation-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .reservation-form input,
+  .reservation-form select,
+  .reservation-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  .reservation-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .res-section {
+    display: none;
+    margin-bottom: 1.5rem;
+  }
+  
+@media(max-width:768px){
+	.spa-overview,
+	.dining-overview,
+	.restaurant,
+	.spa-list,
+	.room-section,
+	.activities-section {
+		flex-direction:column;
+		align-items:center;
+	}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Reservations – Shangri-La Beach Resort</title>
+	<link rel="icon" href="/favicon.png" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="site-header">
+		<a href="index.html" class="logo">
+			<img src="/logo.svg" alt="Shangri-La Logo" width="150" height="50" />
+		</a>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="rooms.html">Rooms</a></li>
+				<li><a href="spa.html">Spa</a></li>
+				<li><a href="dining.html">Dining</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="testimonials.html">Testimonials</a></li>
+			</ul>
+		</nav>
+		<div id="weather"></div>
+	</header>
+
+	<main>
+		<section class="reservation-card">
+			<h1>Make a Reservation</h1>
+			<form class="reservation-form" action="#" method="post">
+
+				<label for="res-type">Reservation Type</label>
+				<select id="res-type" name="res-type" required>
+					<option value="room">Room</option>
+					<option value="spa">Spa Appointment</option>
+					<option value="dining">Dining</option>
+					<option value="activity">Activity</option>
+				</select>
+
+				<!-- Room Reservation Fields -->
+				<div class="res-section" id="res-room">
+					<label for="full-name">Full Name</label>
+					<input type="text" id="full-name" name="full-name" placeholder="John Doe" required />
+
+					<label for="email">Email Address</label>
+					<input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required />
+
+					<label for="checkin">Check-In Date</label>
+					<input type="date" id="checkin" name="checkin" required />
+
+					<label for="checkout">Check-Out Date</label>
+					<input type="date" id="checkout" name="checkout" required />
+
+					<label for="room-type">Room Type</label>
+					<select id="room-type" name="room-type" required>
+						<option value="ocean-view-deluxe">Ocean View Deluxe</option>
+						<option value="beachfront-suite">Beachfront Suite</option>
+						<option value="garden-family">Garden View Family Room</option>
+						<option value="premium-oceanfront">Premium Oceanfront Suite</option>
+						<option value="accessible-room">Accessible Room</option>
+					</select>
+				</div>
+
+				<!-- Spa Reservation Fields -->
+				<div class="res-section" id="res-spa">
+					<label for="spa-service">Spa Service</label>
+					<select id="spa-service" name="spa-service">
+						<option value="signature-massage">Signature Massage</option>
+						<option value="deep-tissue">Deep Tissue Massage</option>
+						<option value="hot-stone">Hot Stone Massage</option>
+						<option value="aromatherapy">Aromatherapy Massage</option>
+						<option value="facial">Facial Treatment</option>
+					</select>
+
+					<label for="spa-date">Appointment Date</label>
+					<input type="date" id="spa-date" name="spa-date" />
+
+					<label for="spa-time">Appointment Time</label>
+					<input type="time" id="spa-time" name="spa-time" />
+				</div>
+
+				<!-- Dining Reservation Fields -->
+				<div class="res-section" id="res-dining">
+					<label for="dining-restaurant">Restaurant</label>
+					<select id="dining-restaurant" name="dining-restaurant">
+						<option value="beach-house">The Beach House</option>
+						<option value="sand-bar">The Sand Bar</option>
+						<option value="poolside-cafe">Poolside Café</option>
+						<option value="lobby-lounge">Lobby Lounge</option>
+					</select>
+
+					<label for="dining-date">Date</label>
+					<input type="date" id="dining-date" name="dining-date" />
+
+					<label for="dining-time">Time</label>
+					<input type="time" id="dining-time" name="dining-time" />
+
+					<label for="dining-guests">Guests</label>
+					<input type="number" id="dining-guests" name="dining-guests" min="1" max="20" value="2" />
+				</div>
+
+				<!-- Activity Reservation Fields -->
+				<div class="res-section" id="res-activity">
+					<label for="activity-type">Activity</label>
+					<select id="activity-type" name="activity-type">
+						<option value="snorkeling">Snorkeling</option>
+						<option value="kayaking">Kayaking</option>
+						<option value="paddleboarding">Stand-Up Paddleboarding</option>
+						<option value="volleyball">Beach Volleyball</option>
+						<option value="fitness-center">Fitness Center</option>
+						<option value="kids-club">Kids' Club</option>
+					</select>
+
+					<label for="activity-date">Date</label>
+					<input type="date" id="activity-date" name="activity-date" />
+
+					<label for="activity-time">Time</label>
+					<input type="time" id="activity-time" name="activity-time" />
+
+					<label for="participants">Participants</label>
+					<input type="number" id="participants" name="participants" min="1" max="20" value="1" />
+				</div>
+
+				<label for="special-requests">Special Requests</label>
+				<textarea id="special-requests" name="special-requests" rows="4" placeholder="Any special requests..."></textarea>
+
+				<button type="submit" class="btn btn-primary" id="sub-res">Submit Reservation</button>
+			</form>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p>© 2025 Shangri-La Beach Resort. All Rights Reserved.</p>
+		<a href="index.html" class="btn btn-outline">Back to home</a>
+	</footer>
+
+	<script src="weather.js"></script>
+	<script src="scripts.js"></script>
+</body>
+</html>
