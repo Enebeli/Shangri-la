@@ -1,12 +1,8 @@
-// weather.js - Fetch and display Cancun, Mexico weather
-
 document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = '672a18bc60d7a5e8216c84a28f8ff6c6'; // replace with your API key
-    const lat = 21.1619;  // Cancun latitude
-    const lon = -86.8515; // Cancun longitude
+    const apiKey = '672a18bc60d7a5e8216c84a28f8ff6c6'; 
+    const lon = -86.8515;
     const weatherDiv = document.getElementById('weather');
   
-    // Build API URL (metric units—Celsius)
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   
     fetch(url)
