@@ -292,9 +292,14 @@ img {
 	.site-header {
 		display: flex;
 		flex-wrap: wrap;      
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		gap: 1rem;
 	  }
-	  
-}
+		.main-nav ul {
+		  flex-direction: column;   /* stack links vertically */
+		  align-items: center;      /* center them */
+		  gap: 1rem;                /* space between items */
+		  width: 100%;              /* fill the header width */
+		}
+	  }
